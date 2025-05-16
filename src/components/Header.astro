@@ -3,13 +3,28 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
+<header style="position: fixed; top: 0; left: 0; width: 100%; background: white; z-index: 1000; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<a href="/">
+			<img 
+			src="https://www.reliefcorner.org/uploads/logo/1721637840_6c8c6a05b4475ed60cf5.png" 
+			alt="Relief Corner Logo" 
+			width="200" 
+			height="auto" 
+			style="max-height: 60px;"
+			/>
+		</a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href="/about">About Us</HeaderLink>
+			<HeaderLink href="/about">Our Team</HeaderLink>
+			<HeaderLink href="/about">Programs</HeaderLink>
+			<HeaderLink href="/about">Events</HeaderLink>
+			<HeaderLink href="/about">Community</HeaderLink>
+			<HeaderLink href="/about">Contact Us</HeaderLink>
+
+			<a href="https://www.reliefcorner.org/page/our-team" class="btn btn-sm">APPOINTMENT</a>
+
 		</div>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
@@ -46,7 +61,8 @@ import { SITE_TITLE } from '../consts';
 	header {
 		margin: 0;
 		padding: 0 1em;
-		background: white;
+    	padding: 10px;
+    	cursor: pointer;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
 	h2 {
